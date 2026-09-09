@@ -1,14 +1,13 @@
-name: Build Moathir APK
+name: Build Moathir Native APK
 
 on:
-  workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -30,11 +29,12 @@ jobs:
       - name: Install Android SDK 35
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
-      - name: Build debug APK
+      - name: Build native debug APK
         run: gradle :app:assembleDebug --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: Moathir-APK
+          name: Moathir-Native-APK
           path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error

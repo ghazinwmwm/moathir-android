@@ -1,1 +1,1 @@
-# Intentionally minimal for the first Moathir Android wrapper build.
+# Moathir native app - no custom ProGuard rules required yet.
