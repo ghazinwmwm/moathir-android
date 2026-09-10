@@ -1,11 +1,14 @@
-# Moathir Native Android
+# Moathir Native Demo Template
 
-تطبيق مؤثر أندرويد Native حقيقي، بدون WebView.
+نسخة معاينة Native لتطبيق مؤثر، مطابقة لهيكل وواجهة النسخة الأصلية قدر الإمكان، لكنها تعمل محلياً بالكامل بدون WebView وبدون Backend وبدون أي اتصال بالإنترنت.
 
-- Android SDK UI: Java + native Android Views
-- Backend: Supabase الحالي لمنصة مؤثر
-- Package: `com.joinmoathir.app`
-- يدعم تسجيل الدخول/إنشاء حساب، الرئيسية، اكتشاف صناع المحتوى، الفرص، المجتمع، والحساب.
-- GitHub Actions يبني APK تلقائياً.
+- Android Native: Java + Android Views
+- لا يوجد Supabase أو API
+- لا يوجد إذن Internet
+- تسجيل الدخول تجريبي ويمكن تجاوزه مباشرة
+- بيانات مثال جاهزة لصناع المحتوى والفرص والمجتمع والحساب
+- البحث والنشر وإضافة فرصة تعمل محلياً داخل جلسة التطبيق
+- Package منفصل: `com.joinmoathir.demo` حتى يمكن تثبيتها بجانب النسخة الأصلية
+- GitHub Actions يبني APK تلقائياً من فرع `demo-native-template`
 
-> لا يحتوي التطبيق على WebView ولا يحمّل واجهة الموقع داخله.
+> هذه النسخة قالب للمعاينة والتصميم، وليست مرتبطة ببيانات منصة مؤثر الحقيقية.
