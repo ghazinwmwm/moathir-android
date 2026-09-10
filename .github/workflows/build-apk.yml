@@ -1,8 +1,8 @@
-name: Build Moathir Native APK
+name: Build Moathir Demo Native APK
 
 on:
   push:
-    branches: [main]
+    branches: [main, demo-native-template]
   workflow_dispatch:
 
 jobs:
@@ -29,12 +29,12 @@ jobs:
       - name: Install Android SDK 35
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
-      - name: Build native debug APK
+      - name: Build demo native debug APK
         run: gradle :app:assembleDebug --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: Moathir-Native-APK
+          name: Moathir-Demo-Native-APK
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
